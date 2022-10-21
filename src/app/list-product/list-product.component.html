@@ -1,0 +1,18 @@
+produits <input type="text" [(ngModel)]="maxPrice">
+<table>
+    <tr>
+      <td>ID</td>
+      <td>Titre</td>
+      <td>Prix</td>
+      <td>Quantité</td>
+      <td>Like</td>
+</tr>
+    <tr *ngFor="let p of listProduct; let i=index" >
+      <td>{{p.id}}</td>
+      <td>{{p.title}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.quantity}}</td>
+      <td><button (click)="buy(i)" [disabled]="p.quantity==0" >Buy</button></td>
+    </tr>
+
+  </table>

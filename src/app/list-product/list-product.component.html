@@ -1,5 +1,6 @@
 <h4>produits</h4>
-<input class="form-control" type="text"  [(ngModel)]="maxPrice">
+<input class="form-control" type="text"
+       [(ngModel)]="maxPrice">
 <table class="table">
    <thead>
    <tr>
@@ -10,12 +11,14 @@
      <th>Like</th>
    </tr>
    </thead>
-    <tr *ngFor="let p of listProduct; let i=index" >
+    <tbody *ngFor="let p of listProduct; let i=index" >
+      <tr *ngIf="p.price<= maxPrice">
       <td>{{p.id}}</td>
       <td>{{p.title}}</td>
       <td>{{p.price}}</td>
       <td>{{p.quantity}}</td>
       <td><button (click)="buy(i)" [disabled]="p.quantity==0" >Buy</button></td>
-    </tr>
+      </tr>
 
+    </tbody>
   </table>

@@ -1,12 +1,15 @@
-<h1>produits</h1> <input type="text" [(ngModel)]="maxPrice">
-<table>
-    <tr>
-      <td>ID</td>
-      <td>Titre</td>
-      <td>Prix</td>
-      <td>Quantité</td>
-      <td>Like</td>
-</tr>
+<h4>produits</h4>
+<input class="form-control" type="text"  [(ngModel)]="maxPrice">
+<table class="table">
+   <thead>
+   <tr>
+     <th>ID</th>
+     <th>Titre</th>
+     <th>Prix</th>
+     <th>Quantité</th>
+     <th>Like</th>
+   </tr>
+   </thead>
     <tr *ngFor="let p of listProduct; let i=index" >
       <td>{{p.id}}</td>
       <td>{{p.title}}</td>

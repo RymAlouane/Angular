@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product} from "../model/product";
+import {CalculService} from "../services/calcul.service";
 @Component({
   selector: 'app-list-product',
   templateUrl: './list-product.component.html',
@@ -15,8 +16,13 @@ contenu="Le contenu de la page d'accueil";
 
 
   maxPrice!:number;
-  constructor() { }
-
+  n!:number;
+  constructor(private CalculS:CalculService) { }
+GetN()
+{
+  this.n=this.CalculS.getNumberOf
+  (this.listProduct,"quantity",0);
+}
   ngOnInit(): void {
     this.listProduct=[
       {id: '1', title: "T-shirt 1", price: 18, quantity: 0, like: 0},

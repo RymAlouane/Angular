@@ -9,6 +9,7 @@
      <th>Prix</th>
      <th>Quantité</th>
      <th>Like</th>
+     <th>Détail</th>
    </tr>
    </thead>
     <tbody *ngFor="let p of listProduct; let i=index" >
@@ -18,7 +19,9 @@
       <td>{{p.price}}</td>
       <td>{{p.quantity}}</td>
       <td><button (click)="buy(i)" [disabled]="p.quantity==0" >Buy</button></td>
+      <td><a routerLink="{{p.id}}">Detail</a> </td>
       </tr>
-
     </tbody>
   </table>
+<button (click)="GetN()">GetN</button>
+{{n}}

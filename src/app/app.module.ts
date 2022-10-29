@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormComponent } from './form/form.component';
+import { DetailsComponent } from './details/details.component';
+import { TodolistComponent } from './todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormComponent } from './form/form.component';
     ListProductComponent,
     FooterComponent,
     NotFoundComponent,
-    FormComponent
+    FormComponent,
+    DetailsComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,

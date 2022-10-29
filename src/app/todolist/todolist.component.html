@@ -1,0 +1,24 @@
+<h4>TODOList</h4>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>UserId</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Completed</th>
+
+  </tr>
+  </thead>
+  <tbody *ngFor="let p of todoList; let i=index" >
+  <tr>
+    <td>{{p.userId}}</td>
+    <td>{{p.id}}</td>
+    <td>{{p.title}}</td>
+    <td>{{p.completed}}</td>
+  </tr>
+  </tbody>
+  <button (click)="calcul()">GetC</button>
+{{c}}
+</table>
+
